@@ -46,4 +46,7 @@ Route::middleware('auth')->group(function () {
 //Website Routes
 Route::get('/', [WebsiteController::class, 'home']);
 Route::get('/shop', [WebsiteController::class, 'shop']);
+Route::get('/shop-detail/{id}', [WebsiteController::class, 'details']);
 Route::get('/contact', [WebsiteController::class, 'contact']);
+Route::post('/add-cart/{id}', [WebsiteController::class, 'addToCart']);
+Route::get('/cart', [WebsiteController::class, 'cart']);

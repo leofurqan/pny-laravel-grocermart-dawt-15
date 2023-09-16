@@ -25,9 +25,9 @@ class CategoriesController extends Controller
         ]);
 
         $category = new Categories;
-        $category->name = $request->input('category_name');
-        $category->description = $request->input('category_description');
-        $category->isActive = $request->input('category_status') ? "1" : "0";
+        $category->name = $request->input('name');
+        $category->description = $request->input('description');
+        $category->isActive = $request->input('status') ? "1" : "0";
         $category->save();
         Session::flash('message', "Category Added Successfully");
 
